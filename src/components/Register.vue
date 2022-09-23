@@ -44,8 +44,11 @@
       },
 
       logout() {
-        client.authStore.clear();
-        this.status = false
+        if (this.status == true) {
+            client.authStore.clear();
+            this.status = false
+            console.log('logged out')
+        }
       }
 
     }
